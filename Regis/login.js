@@ -79,7 +79,7 @@ function onlypass() {
     reg = /[A-Za-z\d@$! %*?&]{8,}$/
     if(!reg.test(password))
     {
-        document.getElementById("s4").innerHTML = "No Currect"
+        document.getElementById("s4").innerHTML = "No Correct"
     }
     else{
         document.getElementById("s4").innerHTML = ""
