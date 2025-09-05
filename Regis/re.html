@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.js">
+    <title>Anpurna Hotel</title>
+    <link rel="shortcut icon" href="Anpurna hotel/icons8-4-star-hotel-100.png" type="image/x-icon">
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="form-box">
+            <form action="" name="Formfill" onsubmit="f1(); return false">
+                <h2>Register</h2>
+                <p id="result"></p>
+                <div class="input-box">
+                    <i class='bx bxs-user'></i>
+                    <input type="text" name="Username" placeholder="Username" id="username" onkeyup="onlychar()">
+                    <span id="s1"></span>
+                </div>
+                <div class="input-box">
+                    <input type="text" name="email" placeholder=" Enter-Email" id="Email" onkeyup="onlyEmail()">
+                    <span id="s2"></span>
+                </div>
+                <div class="input-box">
+                    <i class='bx bxs-phone-call'></i>
+                    <input type="text" name="Mobile" placeholder="Phone Number" id="mobile" onkeyup="onlynum()">
+                    <span id="s3"></span>
+                </div>
+                <div class="input-box">
+                    <i class='bx bxs-lock-alt'></i>
+                    <input type="text" name="Password" placeholder="Password" id="Password" onkeyup="onlypass()">
+                    <span id="s4"></span>
+                </div>
+                <div class="input-box">
+                    <i class='bx bxs-lock-alt'></i>
+                    <input type="text" name="CPassword" placeholder="Confirm Password" id="Confirm"
+                        onkeyup="onlyconfirm()">
+                    <span id="s5"></span>
+                </div>
+                <input type="submit" class="btn" value="Submit" ondblclick=" return showPopup();">
+            </form>
+        </div>
+        <div class="popup" id="popup">
+            <ion-icon name="checkmark-circle-outlline"></ion-icon>
+            <h2>Thank you!</h2>
+            <p>You are Registration sucessfully. Thanks!</p>
+            <a href="login.html"><button onclick="closePopup()">OK</button></a>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+
+</html>

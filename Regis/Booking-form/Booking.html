@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fill the form for booking</title>
+    <link href="Booking.css" rel="stylesheet">
+</head>
+<body>
+<section class="form-container">
+    <form onsubmit="f1(); return false">
+        <h2 class="fill-form">Fill the form for booking</h2>
+        <div class="form-group">
+            <label for="name"> Full Name</label>
+            <input type="text" id="username" onkeyup="onlychar()">
+            <span id="book"></span>
+        </div><br><br>
+        <div class="form-group">
+            <label for="email"> Email Id</label>
+            <input type="email" id="email" onkeyup="onlyemail()">
+            <span id="book1"></span>
+        </div><br><br>
+        <div class="form-group">
+            <label for="booking-date"> Date of Booking</label>
+            <input type="date" id="DOB" onkeyup="onlydob()" >
+            <span id="book2"></span>
+        </div><br><br>
+        <div class="form-group">
+            <label for="room-type"> Select Room Type </label>
+            <select name="room-type" id="room" onkeyup="onlyselect()">
+                <span id="book3"></span>
+                <option value="" selected disabled>Select...</option>
+                <option value="single-room">Single Room</option>
+                <option value="family room">Family Room</option>
+                <option value="duplex room">Duplex Room</option>
+            </select>
+        </div><br><br>
+        <input type="submit" class="book" ondblclick="openPopup()" value="Book-Now">
+    </section>
+</form>
+            <div class="popup" id="popup">
+                <ion-icon name="checkmark-circle-outlline"></ion-icon>
+                <h2>Thank you!</h2>
+                <p>You are Registration sucessfully. Thanks!</p>
+                <a href="main-page.html"><button onclick="closePopup()">OK</button></a>
+            </div>
+    </div>
+   
+</body>
+<script src="Booking.js"></script>
+</html>

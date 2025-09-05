@@ -1,0 +1,168 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+}
+html{
+    font-size: 25px;
+}
+.formstyle{
+width: 655px;
+height: 656px;
+display: flex;
+margin-left: 549px;
+margin-right: 12px;
+margin-bottom: 454px;
+display: block;
+
+}
+.form-group span{
+    color: red;
+    font-size: 15px;
+}
+
+.hello{
+    margin-top: -454px;
+    margin-right: -12rem;
+
+}
+.formstyle> #hello{
+margin-bottom: 90%;
+}
+
+.imgleft{
+    display: block;
+
+height: 455px;
+width: 453px;
+
+}
+
+form{
+    display: block;
+    border: 5px solid rgb(118, 100, 105) ;
+    width: max-content;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 30px 0px;
+    height: 500px;
+    width: 500px;
+}
+
+.fill-form{
+    color: rgba(18, 15, 15, 0.851);
+    padding-bottom: 50px;
+    font-style: oblique;
+    font-size: 30px;
+}
+.form-container{
+    background-color: #065557;
+    background-size: cover;
+    background-blend-mode: overlay;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+label{
+    font-size: 20px;
+    color: white;
+    
+}
+.book{
+    background-color: #065557;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    background-blend-mode: overlay;
+}
+input,
+select{
+    padding: 5px;
+    font-size: 15px;
+}
+.house-rule{
+    background-image: url(rules.jpg);
+    background-size: cover;
+    background-blend-mode: overlay;
+    height: 100vh;
+}
+
+@media only screen and (max-width: 500px) {
+    .hero-text>h1{
+        font-size: 20px;
+    }
+    p{
+        font-size: 10px;
+    }
+    .room-images img{
+        width: 300px;
+        height: 200px;
+    }
+    .hero-text{
+        width: fit-content;
+    }
+}
+@media only screen and (min-width: 501px) and (max-width: 980px) {
+    .hero-text>h1{
+        font-size: 30px;
+    }
+    p{
+        font-size: 20px;
+    }
+}
+
+.popup{
+    width: 400px;
+    background-color: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%)scale(0.1);  
+    transition: transform 0.4s , top 0.4s;
+    visibility: hidden; 
+    text-align: center;
+    padding: 0 30px 30px;
+    height: 330px;
+    color: #000;
+}
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%,-50%)scale(1);
+}
+.popup ion-icon{
+    color: #00ff00;
+    font-size: 50px;
+}
+.popup button{
+    width: 100px;
+    background: #00ff00;
+    padding: 10px 0;
+    margin-top: 50px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 0 0 2px rgb(0, 0,0,.1);
+}
+.popup a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600px;
+    letter-spacing: 2px;
+}
+.open-slide{
+    top: 50px;
+    transform: translate(-50% -50%)scale(1);
+    visibility: visible;
+}
+.popup h2{
+    font-weight: 500;
+    font-size: 38px;
+    margin: 30px 0 10px;
+}

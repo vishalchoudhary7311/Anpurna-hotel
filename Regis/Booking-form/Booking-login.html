@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    
+    <link rel="shortcut icon" href="Anpurna hotel/icons8-4-star-hotel-100.png" type="image/x-icon">
+    <link rel="stylesheet" href="Booking-login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <form action="main-page.html" name="Formfill" onsubmit="login(); return false">
+                <h2>Login In</h2>
+                <p id="result"></p>
+                <div class="input-box">
+                    <i class='bx bxs-envelope-open'></i>
+                    <input type="text" name="email" placeholder="Email" id="email" onblur="onlyemail()">
+                    <span id="p1"></span>
+                </div>
+                <div class="input-box">
+                    <i class='bx bxs-lock-alt' ></i>
+                    <input type="text" name="password" placeholder="Password" id="Password" onblur="onlypass()">
+                    <span id="p2"></span>
+                </div>
+                <div class="button">
+                    <a href="Booking.html" style="color: white;">
+                    <button type="submit" class="btn">
+                         Login 
+                        </a>
+                        </button>               
+                </div>
+                <div class="group">
+                    <span><a href="#">Forget-Password</a></span>
+                </div>
+            </form>
+        </div>
+</body>
+<script>
+    function login() {
+        var Email, res = true, password
+        Email = document.getElementById("email").value
+        if (Email.length == 0) {
+            res = false
+            document.getElementById("p1").innerHTML = "Please Enter the Email id"
+        }
+
+        password = document.getElementById("Password").value 
+    if (password.length == 0) {
+        res = false
+        document.getElementById("p2").innerHTML = " Please Enter your password"
+    }
+    return res
+    }
+
+    function onlyemail() {
+    Email = document.getElementById("email").value
+    reg =  /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!reg.test(Email))
+    {
+        document.getElementById("p1").innerHTML = "please Enter @"
+    }
+    else{   
+        document.getElementById("p1").innerHTML = ""
+    }
+}
+
+function onlypass() {
+    password = document.getElementById("Password").value
+    reg = /[A-Za-z\d@$! %*?&]{8,}$/
+    if(!reg.test(password))
+    {
+        document.getElementById("p2").innerHTML = "No Currect"
+    }
+    else{
+        document.getElementById("p2").innerHTML = ""
+    }
+}
+</script>
+</html>
