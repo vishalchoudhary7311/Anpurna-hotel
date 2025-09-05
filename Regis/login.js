@@ -90,7 +90,7 @@ function onlyconfirm() {
     reg = /[A-Za-z\d@$! %*?&]{8,}$/
     if(!reg.test(confirm))
     {
-        document.getElementById("s5").innerHTML = "Please currect password"
+        document.getElementById("s5").innerHTML = "Please correct password"
     }
     else{
         document.getElementById("s5").innerHTML = ""
